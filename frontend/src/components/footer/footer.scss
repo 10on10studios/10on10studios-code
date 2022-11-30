@@ -1,0 +1,80 @@
+@use "../../scss/" as *;
+
+.footer {
+    position: relative;
+    padding: 3rem 2rem;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(230, 218, 218);
+
+   
+
+    &::after {
+        
+        content: "";
+        position: absolute;
+        bottom: 410px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top,#012c35, rgba(255, 255, 255, 0));
+        @include mobile {
+            bottom: 300px; 
+        }
+    }
+    .logoicon{
+        width: 111px;
+        height: 135px;
+        @include mobile {
+            width:40px;
+            height: 30px; 
+        }
+    }
+
+    &__content {
+        max-width: 1000px;
+
+        &__logo {
+            @include flex(center, center);
+            // margin-bottom: 3rem;
+        }
+       
+
+        &__menus {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: right;
+            font-variant: petite-caps;
+            position: relative;
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 8px 36px;
+            }
+        }
+
+        &__menu {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            margin-top: 1rem;
+
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            & > * ~ * {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+.blog1 {
+    position: absolute;
+    top: 124px;
+}
+.blog2 {
+    position: absolute;
+    right: 155px;
+    bottom: 137px;
+}
+

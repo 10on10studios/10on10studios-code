@@ -1,0 +1,20 @@
+@use "../../scss/" as *;
+
+.bg{
+     display: flex;
+     flex-wrap: wrap;
+     overflow: hidden;
+ }
+ .sliderimg{
+        
+    height: 265px;
+  }
+    
+
+  @media (maxWidth: '767px') {
+    .sliderimg{
+        
+        height: 165px;
+      }
+
+  }

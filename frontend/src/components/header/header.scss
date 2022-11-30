@@ -1,0 +1,150 @@
+@use "../../scss/" as *;
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+
+    @include flex(center, unset);
+
+    img {
+       
+        width: 63px;
+
+        @include mobile {
+            width: 30px;
+            margin-right: 0;
+        }
+    }
+}
+.logoicon{
+    width: 90px;
+    height: 53px;
+    @include mobile {
+        width:40px;
+        height: 35px; 
+    }
+}
+.logostyle{
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px #a9b2af;
+}
+.logoSpan{
+    color: #fdfd97;
+    font-size: 40px;
+   
+}
+.logoSpan1{
+    color: #fddd5c;
+    font-size: 40px;
+   
+}
+.header {
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: height 0.3s ease, background-color 0.3s ease;
+
+    &.shrink {
+        height: $header-shrink-height;
+        background-color: #000;
+        background: rgba(20, 20, 20, 0.9) !important;
+        // color: #000;
+        box-shadow: 0px 11px 48px -15px #111; 
+    }
+
+    &__wrap {
+        @include flex(center, space-between);
+        height: 90%;
+        padding: 0 2rem;
+
+    }
+
+    &__nav {
+        @include flex(center, unset);
+
+        & > * ~ * {
+            margin-left: 2rem;
+        }
+
+        li {
+            
+            font-weight: 700;
+            position: relative;
+            font-size: 1.5rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                transition: width 0.5s ease;
+                height: 2px;
+                background-color: $main-color;
+            }
+            
+            &.active::after,
+            &:hover::after {
+                width: 100%;
+            }
+            @include mobile {
+                padding: 0px 57px;
+
+                &.active::after,
+                &:hover::after {
+                    width: 30%;
+                }
+            }
+        }
+
+        @include mobile {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 5rem;
+            color: #fff;
+            width: 100%;
+            background-color: $body-bg;
+            padding: 0 2rem;
+            box-shadow: $box-shadow;
+
+            @include flex(center, space-between);
+
+            & > * ~ * {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.logostylecss{
+    
+    width: 111px;
+    height: 132px;
+    
+}
+@media (max-width: 360px) {
+    .logo {
+        font-size:10px;
+        font-weight: 600;
+    }
+    .logoSpan{
+        font-size:18px;
+    }
+    .logoSpan1{
+        font-size:18px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .logoSpan{
+        font-size:18px;
+    }
+    .logoSpan1{
+        font-size:18px;
+    }
+  }

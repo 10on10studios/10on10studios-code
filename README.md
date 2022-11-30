@@ -1,2 +1,3 @@
-# 10on10studios-code
-We have the code for 10on10studios in this repository, frontend as well as backend
+# 10on10studios
+
+We are an opensource knowledge library based on Decentralized storage on top of IPFS. This repository contains the frontend as well as backend code for the project.

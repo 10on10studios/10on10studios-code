@@ -1,0 +1,51 @@
+@use "../../scss/" as *;
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.justify-content-md-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.col{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.movie-search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    max-width: 300px;
+    margin: auto;
+    background: #f1f1f1;
+  }
+  .movie-search button {
+    
+    padding: 10px;
+    background: #ff0000;
+    color: white;
+    box-shadow: 0px 0px 7px 8px #ff00004d;
+    border-radius: 30px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  .swiperslide{
+    margin-right: 45px;
+    padding: 25px 0;
+
+    @include tablet {
+        margin-right: 0px;
+    }
+
+    @include mobile {
+        width: 0px;
+        padding: 22px 8px;
+    }
+  }
